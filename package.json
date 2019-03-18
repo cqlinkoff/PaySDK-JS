@@ -44,5 +44,9 @@
   },
   "dependencies": {
     "@cqlinkoff/wk-bridge": "^1.0.1"
-  }
+  },
+  "files": [
+    "es",
+    "lib"
+  ]
 }
