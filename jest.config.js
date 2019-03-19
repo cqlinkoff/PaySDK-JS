@@ -13,7 +13,7 @@ module.exports = {
     'node_modules'
   ],
   'globals': {
-    'NODE_ENV': 'development'
+    'NODE_ENV': 'test'
   },
   'testURL': 'http://localhost'
 }

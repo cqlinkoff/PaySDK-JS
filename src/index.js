@@ -1,4 +1,5 @@
 import WKBridge from '@cqlinkoff/wk-bridge'
+import qs from 'qs'
 
 export default class ChainLongPay {
   constructor () {
@@ -14,12 +15,18 @@ export default class ChainLongPay {
    * @return {Promise} pay result
    * @memberof ChainLongPay
    */
-  payOrder (order) {
+  async payOrder (order) {
     if (!order) {
       throw new TypeError('Invalid Order')
     }
-    return this.bridge.postMessage('payOrder', {
-      order
-    })
+    try {
+      const res = await this.bridge.postMessage('payOrder', {
+        order
+      })
+      const paidOrder = qs.parse(res)
+      return paidOrder
+    } catch (err) {
+      throw err
+    }
   }
 }

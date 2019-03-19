@@ -43,7 +43,9 @@
     "jest": "^24.5.0"
   },
   "dependencies": {
-    "@cqlinkoff/wk-bridge": "^1.0.1"
+    "@babel/plugin-transform-runtime": "^7.3.4",
+    "@cqlinkoff/wk-bridge": "^1.0.2",
+    "qs": "^6.6.0"
   },
   "files": [
     "es",
