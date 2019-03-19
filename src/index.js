@@ -10,7 +10,8 @@ export default class ChainLongPay {
   /**
    * @description pay order
    * @date 2019-03-18
-   * @param {string} order
+   * @param {string} order order info
+   * @return {Promise} pay result
    * @memberof ChainLongPay
    */
   payOrder (order) {
